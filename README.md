@@ -24,7 +24,7 @@
     <br>
     <h1>Packages -Node used</h1>
     <br>
-   <h2>express, body-parser, dotenv, mysql, express-handlebars, and path</h2>
+   <h2>sequelize, express, body-parser, dotenv, mysql2, express-handlebars, and path</h2>
     <br>
     <h2>
         <a href="https://github.com/pcheno">Paul Chenoweth</a>
