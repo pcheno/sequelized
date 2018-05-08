@@ -58,6 +58,7 @@ $(document).ready(function() {
       },
       success: function (response) {
         console.log('response', response)
+        location.reload();
       }
     })
   });
