@@ -8,7 +8,7 @@ $(document).ready(function() {
     if (validBurger.length > 0) {
       //no blank names
       var newBurger = {
-        burger: validBurger
+        burger_name: validBurger
       };
 
       // Send the POST request.

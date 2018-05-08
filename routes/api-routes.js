@@ -6,10 +6,12 @@ module.exports = function (app) {
 
     // route to send added burger request through burger model function
     app.post("/api/burgers", function (req, res) {
+        console.log("-----------app.post-------");
         db.Burger.create({
             burger_name: req.body.burger_name
         }).then(function (dbBurger) {
-
+            console.log("-----------then-------");
+            console.log(dbBurger);
             // We have access to the new burger as an argument inside of the callback function
             res.json(dbBurger);
         })
