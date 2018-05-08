@@ -10,7 +10,7 @@ module.exports = function (app) {
             burger_name: req.body.burger_name
         }).then(function (dbBurger) {
 
-            // We have access to the new todo as an argument inside of the callback function
+            // We have access to the new burger as an argument inside of the callback function
             res.json(dbBurger);
         })
             .catch(function (err) {
@@ -19,15 +19,14 @@ module.exports = function (app) {
                 res.json(err);
             });
     });
-
-    // route to display all burgers in database in a json
+    // route to display all burgers
     app.get("/api/burgers", function (req, res) {
         db.Burger.findAll({}).then(function (dbBurger) {
             res.json(dbBurger);
         });
     });
 
-    // route to update status of burger through burger model function
+    // route to update status of burger
     app.put("/api/burgers/:id", function (req, res) {
         db.Burger.update({
             devoured: req.body.devoured
@@ -45,7 +44,7 @@ module.exports = function (app) {
             });
     });
 
-    // route to delete burger through burger model function
+    // route to delete burger 
     app.delete("/api/burgers/:id", function (req, res) {
         db.Burger.destroy({
             where: {

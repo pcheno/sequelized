@@ -3,7 +3,8 @@ $(document).ready(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     var validBurger = $("#burger").val().trim();
-
+    console.log("----here comes the new burger-------");
+    console.log(validBurger);
     if (validBurger.length > 0) {
       //no blank names
       var newBurger = {
@@ -18,7 +19,7 @@ $(document).ready(function() {
         function () {
           console.log("added new burger");
           // Reload the page to get the updated list
-          location.reload();
+         // location.reload();
         }
       );
     }; // if (validBurger.length
