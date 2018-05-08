@@ -27,12 +27,18 @@ $(document).ready(function() {
   $(".change-burger").on("click", function (event) {
 
     var id = $(this).data("burgerid");
+    var newDevoured = $(this).data("newdevoured");
+    if (newDevoured === false) {
+      newDevoured = true;
+    } else {
+      newDevoured = false; 
+    }
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: {
-        devoured: true
+        devoured: newDevoured
       }
     }).then(
       function () {
