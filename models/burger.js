@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         // defaultValue is a flag that defaults a new burger complete value to false if
         // it isn't supplied one
-        defaultValue: 0
+        defaultValue: false
       }
     });
     return Burger;
