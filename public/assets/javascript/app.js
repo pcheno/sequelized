@@ -3,8 +3,7 @@ $(document).ready(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     var validBurger = $("#burger").val().trim();
-    console.log("----here comes the new burger-------");
-    console.log(validBurger);
+
     if (validBurger.length > 0) {
       //no blank names
       var newBurger = {
