@@ -19,7 +19,7 @@
           {{#each burgers}} {{#if devoured}}
           <li>
             {{burger_name}}
-            <button data-burgerid="{{this.id}}" data-newdevoured="{{this.devoured}}" class="change-burger">?</button>
+            <button data-burgerid="{{this.id}}" data-newdevoured="{{this.devoured}}" class="change-burger">Again?</button>
             <button data-burgerid="{{this.id}}" class="delete-burger">Delete</button>
           </li>
           {{/if}} {{/each}}
