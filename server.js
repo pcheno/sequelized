@@ -4,12 +4,13 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+require("dotenv").config();
 var db = require("./models");
 
 // sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 
 // variable declaration for handlebars
 const exphbs = require("express-handlebars");
